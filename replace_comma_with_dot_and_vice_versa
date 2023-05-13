@@ -1,0 +1,17 @@
+s1 = "siva, rama, krishna. This, is a new, program."
+s2 = []
+for i, j in enumerate(s1):
+    if j == ',':
+        s2.append(j)
+        s2[i] = '.'
+    elif j == '.':
+        s2.append(j)
+        s2[i] = ','
+    else:
+        s2.append(j)
+
+print(''.join(s2))
+
+
+
+
