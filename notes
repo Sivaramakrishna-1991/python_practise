@@ -1,0 +1,301 @@
+1. UPPER()
+2. LOWER()
+3. RAND(A,B)
+4. RANDOM()--> floating point 0.000000->0.9999999
+5. STR.SPLIT("CHAR")
+6. RANDOM.CHOICE()
+7. LEN(list)
+8. SUM(LIST)
+9. MAX(LIST)--->  we can use for str
+10. MIN(LIST)--> we can use for str
+11. TITLE()--->(ex: str.title()--> display first letter in capital letter)
+12. if you want to print characters like  '   "   \  then use escpae character \ (ex: msg='He said. \'Let us Python')
+13. id()-----> (ex:print(id(varable))
+14. statistics.mean(data)    # import statistics module and use these functions, data is a list
+15. statistics.mode(data)
+16. statistics.median(data)
+17. DEVMOD(NUM1, NUM2) #returns quotent and remainder NUM1/NUM2
+18. Disposal variable _ is usally used when we do not wish to use the variable further, and is being used only as a place-holder.
+19. ISINSTANCE(ele, tuple/list/set/dict)  # checks for the ele belongs to tuple or list or set or dict etc. 
+20. sys.setrecursionlimit(10 ** 6)
+21. map(fun_to_apply, list_of_inputs) # return obj converted to list, tuple etc.--> ex: map(math.factorial, lst1)
+22. filter(fun_to_apply, list_of_inputs) # return obj need to conv to list, tuple etc. 
+23. reduce(fun_to_apply, list_of_inputs) # return obj need to conv to list, tuple etc, performs a rolling computation to sequential pairs of values in a sequence and returns the result. ** from funtools import reduce
+(map -> project, filter-> select, reduce-> aggregate)
+22. import math, random, etc--> we can import multiple modules in single line
+23. from math import sin, cos, tan --> we can import only specific names from a modules
+24. from functions import * --> imports all the functions
+25. from functions import display as disp --> we can rename a module while importing 
+26. globals()[var]--> prints the gloabal variables
+27. locals()---> prints the local variables
+28. __init__() --> first method to execute after intializing object
+29. vars() --> returns the dictionary of attributes and their values
+30. dir() -->  returns the list of attributes
+31. keyword.kwlist---> import keyword (to lists all keywords in python)
+32. bin(x) --> returns binary equivalent
+33. oct(x)
+34. hex(x)
+35. int(numeric string, base)
+36. all((a>1, b>2)) or any(()) used to check multiple conditions
+37. var--> if we declare variable name like this in a class, it can be called or used in anywhere in the program
+38. _var--> if we declare variable name like this in a class, it can be called or used in the class or its base classes only
+39.__ var--> if we declare variable name like this in a class, it can be called or used  in that class only
+40. isinstance(obj, class) --> to check whether the obj is instance of the class
+41. issubclass(derived, base) --> to check whther the derived class is derived from the particular base
+42. __mro__     -->gives the method of resolution order
+43. from abc import ABC, abstractmethod --> abc package, ABC --> Class, abstractmetho --> method   used for standardization process
+44. __iter__, __next__, iter(), next()
+45. hasattribute(obj, attrbute)
+47. t=threading.current_thread(){function} --> import threading
+48. t.name --> returns thread name {name, ident attributes}
+49. t.ident --> return thread unique identity
+50. t.is_alive() --> returns the status of thread
+51. t.start() --> to start the thread
+52. time.sleep(sec)  --> stop the execution (import time)
+53. time.join() --> waits for the thread on which it is called
+54. f.open(filename, r) --> to open a file
+55. f.read() --> to read file
+56. f.write(msg) --> write message to file
+57. f.close() --> closes the file
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+							STRING FUNCTIONS
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. str.upper() ---> to make all characters upper case
+2. str.lower() ---> to make all characters in the string into lower case
+3. str.isalpha()--> checks if all characters in string are alphabets
+4. str.isdigit() --> checks if all characters in string are digits
+5. str.isalnum()
+6. str.islower()
+7. str.isupper()
+8. str.startswith()--> checks if string starts with a value [ex:str.startswith('a')]
+9. str.endswith()---> checks if string ends with a value. 
+10.str.find() ---> searches for a value, returs its position. [ex:str.find('h',4,6)-> between the position 4 and 6]
+11.str.replace() ---> replace one value with another [ex: str.replace('char1','char2')]
+12.str.lstrip()--> removes whitespace from the left of string 
+13.str.rstrip()---> removes whitespace from the right of string
+14.str.strip()---> removes whitespaces from left and right
+15.str.split()---> split the string at a specified separator stirng. [ex:str.split('_')]
+16.str.partition()--> partitions string into 3 parts at fist occurance of specified string [ex: str.partiotion('ri')]
+17.join()--> different than conactenation. It joins string to each element of string1 except last  [ex: '-'.join(msg)]
+18.str.capitalize()--> converts first character of the string to upper case
+19.str.title()---> converts first character of each word of the string to upper case
+20.str.swapcase()----> swapcase in the string
+21.chr(65)---> return the unicode character of the corresponding number(A)
+22.ord('A')---> prints the corresponind ASCII number of the value(65)
+23. == ; != ; < ; > ; <= ; >= we can use these as comparison among strings
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+							LISTS FUNCTIONS								
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. enumerate(list) --> to get the index of elements in the list [ex: for index, name in lst1: ]
+2. lists are mutable --> list[0] = 'hello'
+3. concatenation of list-  --->  lst = lst + [27, 25, 29]
+4. merging of list ----> list3 = list1 + list2 or lst2 = list1 * 2
+5. conversion of string/tuple/set into list ---> list_conv = list(str1)
+6. Aliasing of list , changing of one list changes other ----> list2 = list1
+7. cloning list, add one empty to list to complete list ----> lst2 = list2 + list1 [ initialize list2 as empty]
+8. search an element in the list ---> a in list1
+9. Identity: check two lists are equal or not ---> lst1 is list2 or list1 is not list2
+10. comparision: we can compare two lists ----> list1 < list2
+11. Emptiness: we can check whether a list is empty ---> if not list1
+12. delete the list using del keyword
+
+BUILT IN FUNCTIONS: 
+----------------------------
+1.len(lst)       # return number of items in the list
+2.max(lst)     # return maximum element in the list
+3.min(lst)      #return minimum element in the list
+4 sum(lst)     # return sum of all elements in the list
+5.any(lst)      # return true if any element of list is true
+6.all(lst)        # return true if all elements of lst are true
+7.del(lst)       # deletes element or slice or entire list
+8.sorted()     # returns new sorted list and keeps original list unchanged
+9. reversed()# returns new list_reverseiterator object which has to be converted into a list to get reversed list
+
+
+
+LIST METHODS:
+---------------------
+
+Note: Any list is an object of type list. Its methods can be accessed by the syntax lst.method(). 
+Note: Sort, Reverse won't return list instead they manipulate list
+
+1. lst.sort()  # return sorted list, list remains unchanged  --> lst.sort(reverse = True) or lst.sort(key = my_func) or lst.sort(key = str.lower)
+2. lst.reverse()  # used for reversing list
+3. lst.append()  # add new item at end
+4. lst.remove(12) # delete item 12 from list, throw error if the value is not in list
+5. lst.pop() # removes last item in list
+6. lst.pop(3) # removes 3rd item in the list
+7. lst.insert(3,21)  # insert 21 at 3rd position
+8. lst.count(23)  # count no. of times 23 appears in list
+9. idx = lst.index(22)  # return index of item 22, reports error if the value is absent in list
+10. list.extend(list/tuple/string/dictionary/set) # adds any iterable to the list
+11. list.clear()  # clears the entire list
+12. list2 = list1.copy()  # copies the contents of list1 into list2
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+							TUPLES								
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. enumerate(tuples)  # use this function in for loop by mentioning index, name -> will give output index and element in the tuples
+2. Immutable # we can't assign values to tuples  and append, insert, remove don't work ex: tup1[0]='siva' will throw an error
+  a. If a tuple contains mutable objects then we can modify tuples ex: tup1 = ('siva', [10,20,30]) we can modify list values in tuple
+3. concatenation of tuples  --->  tup1 = tup1 + ('after', 'you', 'became', 'matured')
+4. merging of list ----> tup1 = tup1 + tup2 or tup2 = tup1 * 2
+5. conversion of string/list/set into tuple --->tup_conv = tuple(lst)
+6. Aliasing of tuple , changing of one tuple changes other ----> tup4 = tup3
+7. cloning tuple, add one empty tuple to complete tuple ----> tup2 = tup2 + tup1 [ initialize tup2 as empty]
+8. search an element in the tuple ---> a in tup1
+9. Identity: check two tuple are equal or not ---> tup1 is tup2 or tup1 is not tup2
+10. comparision: we can compare two tuple ----> tup1 < tup2
+11. Emptiness: we can check whether a tuple is empty ---> if not tup1
+12. delete the tuple using del keyword
+
+
+BUILT IN FUNCTIONS: 
+----------------------------
+tup = (25, 73, 37.5, 42)
+1.len(tup)       # return number of items in the list
+2.max(tup)     # return maximum element in the list
+3.min(tup)      #return minimum element in the list
+4 sum(tup)     # return sum of all elements in the list
+5.any(tup)      # return true if any element of list is true
+6.all(tup)        # return true if all elements of tup are true
+7.del(tup)       # deletes element or slice or entire list
+8.sorted(tup)     # returns new sorted list and keeps original list unchanged
+9. reversed(tup)# returns new tup_reverseiterator object which has to be converted into a list to get reversed list
+
+
+TUPLE METHODS:
+---------------------
+
+Note: Any tuple is an object of type tuple. Its methods can be accessed using the syntax tpl.method(). 
+Note: Tuples are immutable, so we can convert the tuple into list and peform the append, insert, pop etc. and again convert into tuple
+
+tpl = (12, 30, 70)
+1. tpl.count(30) # searches for the 30 occurances in the tuple
+2. tpl.index(12) # returns the index of element 12
+3. sorted(tpl, key= operator.itemgetter(2)) # import operator; in general tuple/list sort by name, but we want to sort by specific key use itemgetter(element)
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+							SETS
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. enumerate(sets)  # use this function in for loop by mentioning index, name -> will give output index and element in the sets
+2. mutable # we can assign insert values into normal sets but not frozen set
+3. concatenation of sets  ---> we can't concatenate sets
+4. merging of sets ----> we can't merge sets
+5. conversion of string/tuple/list into set --->set_conv = set(lst)
+6. Aliasing of set , changing of one set changes other ----> set4 = set3
+7. cloning set, add one empty list to complete list ----> set2 = set2 + set1 [ initialize set2 as empty]
+8. search an element in the set ---> a in set1
+9. Identity: check two sets are equal or not ---> set1 is set2 or set1 is not set2
+10. comparision: we can compare two sets ----> set1 < set2
+11. Emptiness: we can check whether a set is empty ---> if not set1
+12. delete the set using del keyword
+
+
+BUILT IN FUNCTIONS: 
+----------------------------
+set = {25, 73, 37.5, 42}
+1.len(set)       # return number of items in the set
+2.max(set)     # return maximum element in the set
+3.min(set)      #return minimum element in the set
+4 sum(set)     # return sum of all elements in the set
+5.any(set)      # return true if any element of set is true
+6.all(set)        # return true if all elements of set are true
+7.del(set)       # deletes element or slice or entire set
+8.sorted(set)     # returns new sorted set and keeps original set unchanged
+
+
+
+
+
+SET METHODS:
+---------------------
+
+1. set1.add('hello')
+2. set1.update(t) --> we can any string/tuple/list/set
+3. set1.copy()  ----> performs deep copy
+4. set1.remove(ele) ---> throws an error if element not existed
+5. set1.discard(ele)  ----> won't throw any error if element not exists
+6. set1.clear()  ---> clears the set
+7. set1.issupperset(set2) --> checks if set1 is superset of set2
+8. set1.issubset(set2) ---> checks if set1 is subset of set2
+9. set1.isdisjoint(set2)  ----> if intersection of two sets is null then that set is called disjoint set
+10. Unlike tuples and lists, sets can't be nested with another sets
+
+MATHEMATICAL SET OPERATIONS :-
+-----------------------------------------------
+1. a |= b  # union
+2. a &= b # intersection
+3. a -=b   # difference
+4. a ^=b  # symmetric difference
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+							DICTIONARIES
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. enumerate(dict)  # use this function in for loop by mentioning index, key, value -> will give output index and items in the dict
+2. mutable # we can assign add/delete/modify
+3. concatenation of dict  ---> we can't concatenate dict
+4. merging of dicts ----> we can't merge dicts
+5. conversion of string/tuple/list into dict --->dict_conv = dict(lst)
+6. Aliasing of dict , changing of one dict changes other ----> dict4 = dict3
+7. cloning dict, add one empty list to complete list ----> dict2 = dict2 + dict1 [ initialize dict2 as empty]
+8. search an element in the dict ---> a in dict1
+9. Identity: check two dicts are equal or not ---> dict1 is dict2 or dict1 is not dict2
+10. comparision: we can compare two dicts ----> dict1 < dict2
+11. Emptiness: we can check whether a dict is empty ---> if not dict1
+12. delete the dict using del keyword
+
+
+
+BUILT IN FUNCTIONS: 
+----------------------------
+dict = {'CS101': 'CPP', 'CS102' : 'DS', 'CS201': 'OOP'}
+1.len(dict)       # return number of key-value in the dict
+2.max(dict)     # return maximum key in the dict
+3.min(dict)      #return minimum key in the dict
+4 sum(dict)     # return sum of all key in the dict
+5.any(dict)      # return true if any key of dict is true
+6.all(dict)        # return true if all keys of dict are true
+7.del(dict)       # deletes element or slice or entire dict
+8.sorted(dict)     # returns new sorted dict and keeps original dict unchanged
+9. reversed(dict)  # can be used for reversing dict/keys/values ex: new_dict = dict(reversed(courses.items()))
+
+
+DICT METHODS:
+---------------------
+1. dict1[key]= 'value'--> we can add new values into the key 
+2. dict1.update(d) --> we can any string/tuple/list/dict
+3. dict1.copy()  ----> performs deep copy
+4. dict1.pop(key)  ---->  throws error if element not exists
+5. dict1.clear()  ---> clears the dict
+6. dict.fromkeys(lst, 25) # dict containig diff keys but same values can be created using a fromkeys() function, all values set to 25.
+7. sorted(dict1.items(), key=operator.itemgetter(1), reverse=True)
+8. zip(dict1, dict2)--> use this in for loop ex: for i, j in zip(dict.items(), dict2.items())
+9. dict1.get(word, 0) --> if it find words then it return 0 for the each unique word  or else return default value 0 or whatever you mentioned
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+							COMPREHENSION
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. lst = [exp for var in sequence [optional for and/ or if]
+2. set = [exp for var in sequence [optional for and/ or if]]
+3. dict_var = {key:value for (key, value) in dictonary,items()}
+
+
+
+
+
+
+
+
+
+
+
