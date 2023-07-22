@@ -1,0 +1,107 @@
+A task is an activity that we carry out. For example, driving a car, watering a plant, cooking food, etc. all 
+are tasks. 
+
+When we perform multiple tasks in overlapping times we are doing them concurrently. 
+
+ex: We watch TV, read a news-paper, sip coffee in overlapping times. At any given moment you are doing only one
+    task
+
+Wehn we perform tasks simultaneously we are doing them parallely. 
+
+ex: While driving a car we carry out several activities in parallel - we listen to music, we drive the car and 
+    we talk to the co-passengers. 
+
+Thread: A program may have serveral units(parts). Each unit of execution is called a thread.
+example of multiple threads: One unit of execution may carry out copying of files, whereas another unit may display
+a progress bar.
+
+ex 2: one unit may let you edit a doc, second unit may check spellings, thrid unti may check grammer and fourth
+unit may do printing. 
+
+
+Councurrency and Parallelism in Programming:
+
+concurrenty is when multiple threads of a program start, run, and complete in overlapping time periods.
+
+once thhe program execution begins one thread may run for some time, then it may stop and the second thread
+may start running. 
+After some time, second thread may stop and the third may start running. 
+Threads may get executed in a round-robin fashion or based on priority of each thread. At any given instance only
+one thread is running. 
+
+Parallelism is when multiple threads of a program literally run at the same time. So at any given instance multiple
+threads are running. 
+In councurrency multiple untis of a program can run on a single-core processor, whereas, in parallelism multiple 
+units can run on multiple cores of a multi-core processor.
+
+Advantages of Concurrency:
+
+- Improves application's speed, by making CPU do other things instead of waiting for slow I/O operations to finish.
+- Simplifies program design. For example, the logic that copies files and logic that displays the progress bar can
+  kept separate.
+
+Advantage of Parallelism:
+- Capability of multi-core procesors can be exploited by running different processes in each processor simultaneously
+
+
+Types of Concurrencies:
+
+- In a multi- thread program one thread runs for some time, then it stops and the second thread starts running. After some time,
+  second thread stops and the third thread starts running. This is true even if the program is being executed on a multi-core
+  processor.
+
+- When context would switch from one thread to another depends on the type of concurrency that we use in our program.
+- Concurrencies are of two types:
+   - Pre-emptive concurrency - The OS decides when to switch from one thread to another.
+   - Cooperative concurrency - The thread decides when to give up the control to the next task.
+
+- Python modules available for implementing concurrency and parallelism in our program are as follows:
+	pre-emptive concurrency - threading
+	cooperative concurrency - asyncio
+	parallelism		- multiprocessing
+
+Thread properties:
+  Every running thread has a name a number called thread identifier associated with it.
+  The name of all running threads need not be unique, whereas the identifier must be unique.
+  The identifier could be reused for other threads, if the current thread ends.
+
+There are two ways to launch a new thread:
+	- By passing the name of the function that should run as a separate thread, to the constructor of the Thread class.
+	- By overriding __init__() and run() methods in a subclass of Thread class.
+
+
+Method 1 - Thread creation
+th1 = threading.Thread(name='My first thread', target=func1)
+th2 = threading.Thread(target = func2) # use default name
+th1.start()
+th2.start()
+
+Method 2 - Thread creation
+class SquareGeneratorThread(threading.Thread):
+    def __init__(self):
+        threading.Thread.__init__(self)
+    def run(self):
+        print('Launching')
+
+th = SquareGeneratorThread()
+th.start()
+
+Once a thread object is created, its activity must be started by calling the thread's start() method. this method in turn invokes
+the run() method.
+start() method will raise an exception RuntimeError if called more than once on the same thread object.
+
+Passing parameters to a Thread:
+	- Sometimes we may wish to pass some parameters to the target function of a thread object.
+	th1 = threading.Thread(target=squares, args=(a,b))
+	th2.threading.Thread(target=cubes,args(a,))
+	- Arguments being passed to the constructor of Thread class will ultimately be passed to the target function. Arguments must be 
+	  in the form of a tuple.
+
+	- Once thread have been launched we have no control over the order in which they are executed. It is controlled by the
+	  thread scheduler of the Python runtime environment.
+	- Sometimes we may wish to pass some parameter to the run() method in the thread class. for this pass the parameters to the
+	  constructor while creating the thread object. The constructor should store them in object's variables. Once stored run()
+	  will be able to access them.
+	 th = SquareGeneratorThread(a,b,c)
+
+join() waits until the thread on which it is called terminates.

@@ -1,0 +1,40 @@
+# Enqueue: Add an element to the end of the queue
+# Dequeue: Remove an element from the front of the queue
+# IsEmpty: Check if the queue is empty
+# Peek: Get the value of the front of the queue without removing it
+# [] [] [] []
+class Queue:
+    def __init__(self):
+        self.queue = []
+
+    def is_empty(self):
+        if len(self.queue) < 1:
+            return True
+        return False
+
+    def enqueue(self, item):
+        self.queue.append(item)
+
+    def dequeue(self):
+        if Queue.is_empty(self):
+            print("Queue is empty")
+            return None
+        print(self.queue.pop(0), "is removed ")
+        return
+
+    def display(self):
+        print(self.queue)
+
+    def peek(self):
+        print("front value=", self.queue[0])
+
+
+q = Queue()
+q.dequeue()
+q.enqueue(5)
+q.display()
+q.dequeue()
+q.display()
+q.enqueue(7)
+q.enqueue(8)
+q.peek()

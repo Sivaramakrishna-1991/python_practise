@@ -1,0 +1,20 @@
+unicode is a standard for representation, encoding and handling of text expressed in all scripts of the world.
+the maxi no'of char that can be represented using 2 bytes.
+
+In unicode every character is assigned an integer value called code point, which is usually expressed in 
+Hexadecimal. Code points for A, B, C, D, E are 0041, 0042, etc. 
+अ आ इ  ई  of devanagari script are 0905, 0906, 0907 etc. 
+
+computers understand only bytes. So we need a way to represent unicode code points as bytes in order to store
+or transmit them. Unicode standard defines a number of ways to represent code points as bytes. These are called
+encodings. 
+
+There are different encoding schemes like UTF-8, UTF-16, ASCII, 8859-1, Windows 1252, etc. UTF-8 is perhaps the most
+popular encoding schemes. 
+
+Code point 0041 maps to byte value 41 in UTF-8, whereas it maps to byte valules ff fe 00 in UTF-17. Similary, 
+code point 0905 maps to byte values e0 a4 and ff fe 05 \t in UTF-8 and UTF-16 respectively. 
+
+UTF-8 uses a variable number of bytes for each code point. Higher the code point value, more the bytes it needs
+in UTF-8.
+

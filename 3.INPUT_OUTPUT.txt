@@ -1,0 +1,15 @@
+name = input("Enter name")
+a, b, c = input("Enter a, b, c values").split()
+lst = [x for x in input("Enter a list of values").split()]
+print(objects, sep='', end ='\n', file=sys.stdout, flush = False)
+r, l, b = 1.5678, 10.5, 12.66
+print(f'radius={r}')
+print(f'length={l} breadth={b} radius={r}')
+print(f'{n:10})  # print n value in 10 columns
+print('radius={} length={} breadth={}'.format(r,l,b))
+print('radius={0} length={1} breadth={2}'.format(r,l,b))  # 0, 1, 2 are arguments of fromat
+print('{0:<5}{1:>7}{2:^8}'.format(r, l, b))   # < left side   > right side  ^ centre
+
+
+
+

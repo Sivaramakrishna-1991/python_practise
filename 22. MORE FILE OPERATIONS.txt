@@ -1,0 +1,41 @@
+# pickle module
+import pickle, student # create a student module
+f = open("student.dat", "wb")
+s = student.Student(123, "john", 90)
+pickle.dump(s, f) # Takes two parameters, s--> object, f--> file we want to serialize
+f.close()
+
+f = open("student.dat", "rb")
+obj = pickle.load(f)
+obj.display()
+f.close()
+
+f = open('sample.txt', 'r')
+print(f.read(12))  # it reads 12 characters only
+f.seek(0)  # it moves the position we have passed in this argument
+print(f.readline())
+print(f.readlines())
+f.close()
+
+______________________________________________________________________________________________________________
+f = open('sample.txt', 'w+')
+f.write("python is awesome\n")
+f.writelines(['pyton\n', 'django\n', 'DRF\N'])
+print('Cursor is at', f.tell())
+f.seek(0)
+print('Cursor is at', f.tell())
+print(f.read())
+______________________________________________________________________________________________________________
+f =open('sample.txt', 'a+')
+print('cursor at', f.tell())
+f.write("Django is for web development\n")
+f.seek(0)
+a = []
+for line in f:
+	a.append(line)
+print(a)
+f.close()
+______________________________________________________________________________________________________________
+f = open('sample.txt', 'r')
+print(len(f.read().split('\n')))
+print(len(f.readlines()))

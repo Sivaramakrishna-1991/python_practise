@@ -1,0 +1,13 @@
+#  Write a Python program to check whether a file exists
+import os
+if os.path.isfile("a.txt"):
+    print("The given file is exists")
+else:
+    print('File is not existed ')
+
+# another method
+try:
+    f = open('aaa.txt')
+    print('File exists')
+except FileNotFoundError:
+    print("File doesn't exists")

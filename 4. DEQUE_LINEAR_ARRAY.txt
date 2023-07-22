@@ -1,0 +1,84 @@
+class Deque:
+    def __init__(self):
+        self.dequeue = []
+
+    def is_empty(self):
+        return len(self.dequeue) == 0
+
+    def push_front(self, item):
+        self.dequeue.insert(0, item)
+
+    def push_back(self, item):
+        self.dequeue.append(item)
+
+    def pop_front(self):
+        if not self.is_empty():
+            return self.dequeue.pop(0)
+        return None
+
+    def pop_back(self):
+        if not self.is_empty():
+            return self.dequeue.pop()
+        return None
+
+    def get_front(self):
+        if not self.is_empty():
+            return self.dequeue[0]
+        return None
+
+    def get_back(self):
+        if not self.is_empty():
+            return self.dequeue[-1]
+        return None
+
+    def get_size(self):
+        return len(self.dequeue)
+
+    def details(self):
+        print(self.dequeue)
+
+
+# Create an instance of Dequeue
+d = Deque()
+
+# Test is_empty() method
+print(d.is_empty())  
+# Output: True
+
+# Test push_front() method
+d.push_front(10)
+d.push_front(20)
+d.push_front(30)
+
+# Test push_back() method
+d.push_back(40)
+d.push_back(50)
+
+# Test get_front() and get_back() methods
+print(d.get_front())  
+# Output: 30
+print(d.get_back())  
+# Output: 50
+
+# Test get_size() method
+print(d.get_size())  
+# Output: 5
+
+# Test pop_front() method
+d.pop_front()
+print(d.get_front())  
+# Output: 20
+
+# Test pop_rear() method
+d.pop_rear()
+print(d.get_back())  
+# Output: 40
+
+# Test is_empty() method
+print(d.is_empty())  
+# Output: False
+
+# Test details() method
+d.details()  
+# Output: [20, 10, 40]
+

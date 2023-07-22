@@ -1,0 +1,12 @@
+# count the number 4 in a given list
+def list_count(lst1):
+    sum_of_four = 0
+    for i in lst1:
+        if i == 4:
+            sum_of_four += 1
+    return sum_of_four
+
+
+lst1 = [5, 4, 3, 2, 4, 1, 4]
+print("count of four in the given list is: ", list_count(lst1))
+

@@ -1,0 +1,62 @@
+# 32. Write a Python program to find the least common multiple (LCM)
+# of two positive integers.
+"""
+ex: 4, 3
+ 4 = 2 ^ 2 , 3 = 3 ^ 1
+ # no common multipliers so multiply 4 and 3. So, LCM = 12
+ ex: 4, 12
+ 12 is a divisor of 4. So, LCM = 12
+ ex: 4, 6
+ 4 = 2 ^2, 6 = 3 * 2
+ 2 is common in both, but 2 ^ 2 is greater than 2, so, write the highest power value
+ and multiply all the remaining values
+ remove common in  both
+24, 48
+48 =
+24 = 24/ 2 = 12 /2 = 6/2 = 3 / 2;  2 * 3
+"""
+import math, itertools
+
+
+def is_prime(n):
+    i = 2
+    while i <= round(math.sqrt(n)):
+        if n % i == 0:
+            return False
+        i += 1
+    else:
+        return True
+
+
+def divisor_cal(a):
+    i = 2
+    lst = []
+    while i < round(math.sqrt(a)):
+        # print("i=", i)
+        if is_prime(i):
+            # print("prime=", i)
+            count = 0
+            b = a
+            while b % i == 0:
+                count += 1
+                b = b // i
+            if count != 0:
+                lst.append(i ** count)
+        i += 1
+    return lst
+
+
+a = int(input("enter a value1: "))
+b = int(input("enter a value1: "))
+lst1 = divisor_cal(a)
+lst2 = divisor_cal(b)
+print(lst1)
+print(lst2)
+lcd = 1
+for i, j in itertools.zip_longest(lst1, lst2, fillvalue=1):
+    if i > j:
+        lcd = lcd * i
+    else:
+        lcd = lcd * j
+print("LCD = ", lcd)
+

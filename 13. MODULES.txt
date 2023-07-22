@@ -1,0 +1,27 @@
+1. Interpreter will first search for a built-in module 
+2. If such a module is not found, then it will search for it in directory list given by the variable sys.path
+3. The list tin the sys.path variable contains directory from where the script has been executed, followed by a 
+list of directories as specified in PYTHONPATH environment variable.
+
+
+Note--> we can print the list of directories in sys.path using:
+if __name__ == '__main__':
+    main()
+
+A particular directory is treated as a package if it contains a file named __init__.py in it. The directory may contain
+other subpackages and modules in it. __init__.py file may be empty or it may contain some initialization code for
+the package. 
+
+Suppose there is a package called pkg containing a module called mod.py. If the module contains functions f1()
+and f2() then the directory structure would be as follows:
+directory - pkg
+contents of pkg directory - mod.py and __init__.py
+contents of mod.py --> f1() and f2()
+
+ex: 1. import math, random
+    2. from math import sin, cos, tan  # import sin, cos and tan functions only
+    3. from math import*  # imports all functions
+    4. import functions as fun  # we can rename module as fun 
+    5. from math import sin as si  # we can rename module functions like this
+
+note--> c:\> pip install pkgname  # to install a third party package

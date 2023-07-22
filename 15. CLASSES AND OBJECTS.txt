@@ -1,0 +1,42 @@
+python supports:
+1. structured programming
+2. Functional programming
+3. Object-oriented programming
+Each object is a specific instance of a class. Ex: Sparrow is a specific instance of a Bird class
+A class describes two things: the form an object created from it will take and functionality it will have. 
+Ex: A bird class may specify the form in terms of weight, color, number of feathers
+    functionality in terms of flying, hopping, chirping, eating, etc.
+    Form is often termed as properties and the functionality is often termed as methods. 
+In python every type is a class. So int, float, complex, bool, str, list, etc are all classes. 
+A class has a name, whereas objects are nameless. Since objects do not have names, they are refereed using their
+address in memory. 
+Note--> when we assign object o = None then it will call destructor function
+We can create class variables and class methods and we can access without creating object
+ex: Classname.Class_variable or Classname.Class_method
+
+vars() --> returns a dictionary of attributes and their values.
+dir()----> returns a list of attributes.
+print(vars(math)) --> prints dictionary of attributes in the math module
+
+class College:
+    name = 'IITB'  # static variable
+
+    def __init__(self, id, addr):
+        self.__id = id
+        self.__addr = addr
+
+    class Student:
+
+        def __init__(self, name, std_id):
+            self.__name = name
+            self.__std_id = std_id
+
+
+c = College(123, 'Bombay')
+c.Student('siva', 20318051)
+
+import gc --> garbage collector
+print(gc.isenabled())
+gc.enable()
+gc.disable()
+

@@ -1,0 +1,33 @@
+It is a good idea to mention a documentation string (doc string) below a module, function, class or method definition.
+It should be the first line below the def or the class statement.
+
+The doc string is available in the attribute __doc__ of a module, function, class or method.
+
+If the doc string is multi-line it should contain a summary line followed by a blank line, followed by a detailed
+comment.Single and multi-line doc strings are written within triple quotes.
+
+Using help() method we can print the functions/class/method documentation systematically.
+
+ex: 1
+def display():
+    """It just displays doc string"""
+    print(display.__doc__)
+
+
+def show(message1='', message2=''):
+    """
+    It displays names
+    :param message1: converts the small to capital letters
+    :param message2: converts the capital letter to small
+    :return:
+    """
+    print(message1.upper())
+    print(message2.lower())
+    print(show.__doc__)
+
+
+display()
+show('siva', 'rama')
+help(display)
+help(show)
+

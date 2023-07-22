@@ -1,0 +1,22 @@
+def function_name():
+    # write code here
+
+1. locals()
+2. globals()
+3. globals()[var] --> gives the current value of var in global namespace. 
+4. SCOPE AND LEGB RULE --> LOCAL(L), ENCLOSING(E), GLOBAL(G), BUILT-IN(B)
+2 
+--> we can assign fun() to variables
+ex: f = function_name
+    f() --> calling the function with that variable name
+
+--> we can pass one function as parameter to other function
+
+def fun1():
+   print('function1 passing as parameter)
+
+
+def fun2(fun1):
+   print(function2 is execting)
+   return fun1
+

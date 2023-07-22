@@ -1,0 +1,5 @@
+# program that concatenates all elements in a list into a string
+# returns the value of a string
+lst = ['s', 'i', 'v', 'a']
+str1 = ''.join(lst)
+print(str1)

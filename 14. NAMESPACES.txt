@@ -1,0 +1,28 @@
+global a = 10 --> declaring variable as global variable
+print(locals())  --> prints the local variables
+print(globals()) --> prints the global variables
+a = 10
+b = 20.9
+c = 'siva'
+lst = ['a', 'b', 'c']
+for var in lst:
+    print(globals()[var])
+
+print(globals()['a'])
+
+def f1():
+    print('in fun1')
+def f2():
+    print('in fun2')
+def f3():
+    print('in fun3')
+lst2 = ['f1', 'f2', 'f3']
+for var in lst2:
+    globals()[var]()
+
+LEGB --> local(L), enclosing (E), Global(G), Built-in(B)
+1. len, str, print--> built-in scope
+2. outside of all functions --> global scope
+3. with in any function  --> local scope
+4. if one fun is defined with in any other function when we try to print the var in inner function but that is
+   is availbe in outer function then that var has enclosing scope

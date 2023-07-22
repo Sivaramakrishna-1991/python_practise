@@ -1,0 +1,89 @@
+f = open("filename", "mode", "buffer")
+buffer --> optional parameter, it will make file buffer while reading/writing, values are 4096 or 8092.
+mode --> w, r, a, w+ (write and read), r+, a+ , x(exclusive mode)
+	 wb, rb, ab, wb+, rb+ ab+, xb+ (for binary versions)
+
+f.close() --> to close a file
+
+ex:1f = open("myfile.txt", 'w')
+    s = input("enter a text")
+    f.write(s)
+    f.close()
+    f1 = open("myfile.txt", 'r')
+    k = f1.read()
+    print(k)
+    f1.close()
+
+ex: 2
+f = open("myfile.txt", "w")
+print("Enter text (Type # when you are done)")
+s = ''
+while s != '#':
+	s = input()
+	f.write(s + "\n")
+f.close()
+
+ex 3
+import os, sys
+if os.path.isfile('myfile.txt'):
+	f = open('myfile.txt', 'r')
+else:
+	print("file does not exist)
+	sys.exit()
+s=f.read()
+print(s)
+f.close()
+
+----------------------------------------------------------------------------------------------------------------
+f.writelines(msgs)
+To write objects other than strings, we need to convert them to strings before writing
+tpl = ('Ajay', 23, 15000)
+f.write(str(tpl))
+f.read(n) # read n characters, and returns as string
+f.readline()  # read a line and returns as string
+f.readlines()  # reads all the lines in a file
+
+r open files of reading (default mode, if we don't specify any argument)
+w open file for writing in text mode
+a open file for appending in text mode
+r+ open file for reading and writing in text mode
+w+ open file for writing and reading in text mode
+a+ open file for appending and reading in text mode
+rb open file for reading in binary mode
+wb open file for writing in binary mode
+ab open file for appending in binary mode
+rb+ open file for reading & writing in binary mode 
+wb+ 
+ab+ 
+note --> if file is opened for writing, if the file already exists, it is overwritten. 
+	if file is opened for writing in binary mode then a bytes-like object should be passed to write
+ex:
+f = open('a.dat','wb+')
+d = b'\xee\x86\xaa'  # series of 3 byes, \x indicates hexadecimal
+f.write(d)
+
+--> If we use with keyword while opening the file, the file gets closed as soon as its usageg is over.
+ex:
+with open('messages', 'r') as f:
+	data = f.read()
+
+
+--> General form of seek() is given below: f.seek(offset, reference)
+reference can take values: 0, 1, 2
+0--> begining of file
+1--> current position
+2--> end of file
+f.seek(512, 0)  # moves to position 512 from begining of file
+f.seek(0, 2)  # moves to end of file
+f.seek(0)  # moves to beging of file
+f.seek(-12, 2) #moves 12 positions to left from end of file
+f.seek(6,1) #moves 6 positions to right from current position
+
+import os, datetime
+file_creation_time = os.path.getctime('path')
+creation_datetime = datetime.datetime.fromtimestamp(file_creation_time)
+print(creation_datetime.strftime("%Y-%m-%d %H:%M:%S"))
+
+File: creation, deletion, renaming, coping, checking, obtaing stastics of a file, etc.
+Dire: creation, recursive creation, renaming, changing into, deleting, listing a direcoty, etc
+Path operations: include obtaining the absolute and relative path, splitting path elements, joining paths, etc.

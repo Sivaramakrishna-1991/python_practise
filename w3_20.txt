@@ -1,0 +1,9 @@
+# write a program that returns a string that is n (non-negative integer)
+# copies of a given string
+def n_copies(str1, n):
+    return str1 * n
+
+
+n = int(input("Enter no' of copies you want to return "))
+str1 = input("Enter a string: ")
+print(n_copies(str1, n))

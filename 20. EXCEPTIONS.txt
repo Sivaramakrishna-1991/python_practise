@@ -1,0 +1,35 @@
+All the exceptions are inherited by BaseException class --> exception --> 1. Standard Error 2. Warning
+
+1. Standard Error --> EOFError, ZeroDivisionError, IndentationError
+2. Warning --> DeprecatedWarning, ImportWarning
+
+ex: 1
+try:
+	a, b = [int(x) for x in input("enter two numbers: ").split()]
+	c = a / b
+	print(c)
+except ZeroDivisionError:
+	print("Division by zero is not allowed, please enter non zero number")
+print("This code after the exception")
+
+
+
+finally--> whether an exception is occured or not, finally will execute, so we better to place close files, close
+database connections in this block. 
+
+ex: 2
+try:
+	f = open("myfile", "w")
+	c = 5 / 0
+	f.write("writing into file")
+except:
+	print("division by zero is not allowed")
+else:
+	print("only execute when there is no exception occured in the program")
+finally:
+	print("this is finally block")
+	f.close()
+
+
+else --> This block only execute when an exception is not occured in the program. 
+

@@ -1,0 +1,53 @@
+time module contains time() --> returns the no'of seconds
+ctime() retuns/ converts to current time
+ex:
+import time
+epochsec = time.time()
+print(epochsec)
+t=time.ctime(epochsec)
+print(t)
+import datetime
+dt = datetime.datetime.today()
+print(dt.day, dt.month, dt.year)
+print(dt.hour, dt.minute, dt.second)
+
+ex:
+from datetime import * 
+d = date(2018, 7, 21)
+t = time(12, 45) # hours, and minutes
+dt = datetime.combine(d, t) # combines date and time
+print(dt)
+ex: sorting the dates
+from datetime import *
+import time
+ldates = []
+d1 = date(2016, 8, 12)
+d2 = date(2017, 9, 11)
+d3 = date(2018, 10, 5)
+ldates.append(d1)
+ldates.append(d2)
+ldates.append(d3)
+ldates.sort()
+time.sleep(3)
+for d in ldates:
+	print(d)
+
+time.perf_counter()  # we can use it for execution time
+
+
+from datetime import *
+import time
+start_time = time.perf_counter()
+ldates = []
+d1 = date(2016, 8, 12)
+d2 = date(2017, 9, 11)
+d3 = date(2018, 10, 5)
+ldates.append(d1)
+ldates.append(d2)
+ldates.append(d3)
+ldates.sort()
+time.sleep(3)
+for d in ldates:
+	print(d)
+end_time = time.perf_counter()
+print("total_execution_time =", end_time - start_time)

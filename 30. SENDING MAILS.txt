@@ -1,0 +1,24 @@
+# sending mails
+1. create message
+2. body 
+3. subject from to
+4. smtpserver
+5. login
+6. send_message
+7. quit
+ahpzbbdtwbkripqe
+
+ex:
+import smtplib
+from email.mime.text import MIMEText
+body = "This is a test email.How are you"
+msg = MIMEText(body)
+msg['From'} = 'yadlaprolusivaramakrishna@gmail.com'
+msg['To'] = 'y.sairamakrishna@gmail.com'
+msg['Subject'] = 'Hello solo sai'
+server = smtplib.SMTP('smtp.gmail.com', 587) # smtp.gmail is for gmail, 587 defualt port
+server.starttls()
+server.login('yadlaprolusivaramakrishna@gmail.com', 'ahpzbbdtwbkripqe')
+server.send_message(msg)
+print('Mail sent')
+server.quit()

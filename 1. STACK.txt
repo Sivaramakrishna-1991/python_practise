@@ -1,0 +1,54 @@
+# push() to insert an element into the stack
+# pop() to remove an element from the stack
+# top() Returns the top element of the stack.
+# isEmpty() returns true if stack is empty else false.
+# size() returns the size of stack.
+def create_stack():
+    stack = []
+    return stack
+
+
+def push(stack, item):
+    stack.append(item)
+    print(f'{item} pushed into stack')
+
+
+def is_empty(stack):
+    if len(stack) == 0:
+        return True
+    return False
+
+
+def pop(stack):
+    if is_empty(stack):
+        print("Stack is empty")
+        return None
+    print(f'{stack[len(stack)-1]} popped from stack')
+    return stack.pop()
+
+
+def top(stack):
+    if is_empty(stack):
+        return "Stack is Empty"
+    return stack[len(stack)-1]
+
+
+def size(stack):
+    return len(stack)
+
+
+stack = create_stack()
+push(stack, 5)
+push(stack, 7)
+push(stack, 9)
+print(top(stack))
+print(size(stack))
+pop(stack)
+pop(stack)
+pop(stack)
+print(top(stack))
+print(size(stack))
+
+
+
+

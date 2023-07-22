@@ -1,0 +1,46 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+							DICTIONARIES
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. enumerate(dict)  # use this function in for loop by mentioning index, key, value -> will give output index and items in the dict
+2. mutable # we can assign add/delete/modify
+3. concatenation of dict  ---> we can't concatenate dict
+4. merging of dicts ----> we can't merge dicts
+5. conversion of string/tuple/list into dict --->dict_conv = dict(lst)
+6. Aliasing of dict , changing of one dict changes other ----> dict4 = dict3
+7. cloning dict, add one empty dict to complete dict ----> dict2 = dict2.copy()
+8. search an element in the dict ---> a in dict1
+9. Identity: check two dicts are equal or not ---> dict1 is dict2 or dict1 is not dict2
+10. comparision: we can't compare two dicts ----> dict1 < dict2
+11. Emptiness: we can check whether a dict is empty ---> if not dict1 or bool(dict1)
+12. delete the dict using del keyword
+
+**note --> we can't slice dictionaries
+
+BUILT IN FUNCTIONS: 
+----------------------------
+dict = {'CS101': 'CPP', 'CS102' : 'DS', 'CS201': 'OOP'}
+1.len(dict)       # return number of key-value in the dict
+2.max(dict)     # return maximum key in the dict
+3.min(dict)      #return minimum key in the dict
+4 sum(dict)     # return sum of all key in the dict
+5.any(dict)      # return true if any key of dict is true
+6.all(dict)        # return true if all keys of dict are true
+7.del(dict)       # deletes element or slice or entire dict
+8.sorted(dict)     # returns new sorted dict and keeps original dict unchanged
+9. reversed(dict)  # can be used for reversing dict/keys/values ex: new_dict = dict(reversed(courses.items()))
+
+
+DICT METHODS:
+---------------------
+1. dict1[key]= 'value'--> we can add new values into the key 
+2. dict1.update(d) --> we can any string/tuple/list/dict
+3. dict1.copy()  ----> performs deep copy
+4. dict1.pop(key)  ---->  throws error if element not exists
+5. dict1.clear()  ---> clears the dict
+6. dict.fromkeys(lst, 25) # dict containig diff keys but same values can be created using a fromkeys() function, all values set to 25.
+7. sorted(dict1.items(), key=operator.itemgetter(1), reverse=True)
+8. zip(dict1, dict2)--> use this in for loop ex: for i, j in zip(dict.items(), dict2.items())
+9. dict1.get(word, 0) --> if it find words then it return 0 for the each unique word  or else return default value 0 or whatever you mentioned
+10. dict1.popitem() --> removes the last item in the dictionary
+

@@ -1,0 +1,25 @@
+1. python basics
+2. decision control
+3. repetition control
+4. console input/output
+5. strings
+6. lists
+7. tuples
+8. sets
+9. dictionaries
+10. comprehensions
+11. functions
+12. recursion
+13. functional programming
+14. Namespaces
+15. Modules and packages
+16. classes and objects(instance, class, static)
+17. intricacies of classes and objects
+18. containership and inheritance
+19. iterators and generators and decorators
+20. exception handling
+21. file input/output
+22. Miscellany
+23. concurrency and parallelism
+24. Synchronization
+25. OS, DATE_TIME, SYS, MATH, RANDOM, RE, JSON, CSV, COLLECTIONS, ARGPARASE, LOGGING 

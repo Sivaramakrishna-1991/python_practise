@@ -1,0 +1,51 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+							LISTS FUNCTIONS								
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. enumerate(list) --> to get the index of elements in the list [ex: for index, name in lst1: ]
+2. lists are mutable --> list[0] = 'hello'
+3. concatenation of list-  --->  lst = lst + [27, 25, 29]
+4. merging of list ----> list3 = list1 + list2 or lst2 = list1 * 2
+5. conversion of string/tuple/set into list ---> list_conv = list(str1)
+6. Aliasing of list , changing of one list changes other ----> list2 = list1
+7. cloning list, add one empty to list to complete list ----> lst2 = list2 + list1 [ initialize list2 as empty]
+8. search an element in the list ---> a in list1
+9. Identity: check two lists are equal or not ---> lst1 is list2 or list1 is not list2
+10. comparision: we can compare two lists ----> list1 < list2
+11. Emptiness: we can check whether a list is empty ---> if not list1 or bool(list1)
+12. delete the list using del keyword
+
+BUILT IN FUNCTIONS: 
+----------------------------
+1.len(lst)       # return number of items in the list
+2.max(lst)       # return maximum element in the list
+3.min(lst)       # return minimum element in the list
+4 sum(lst)       # return sum of all elements in the list
+5.any(lst)       # return true if any element of list is present
+6.all(lst)       # return true if all elements of lst are present
+7.del(lst)       # deletes element or slice or entire list
+8.sorted()       # returns new sorted list and keeps original list unchanged
+9.reversed()     # returns new list_reverseiterator object which has to be converted into a list to get reversed list
+
+
+
+LIST METHODS:
+---------------------
+
+Note: Any list is an object of type list. Its methods can be accessed by the syntax lst.method(). 
+Note: Sort, Reverse won't return list instead they manipulate list
+
+1. lst.sort()  # return sorted list, list remains unchanged  --> lst.sort(reverse = True) or 
+	lst.sort(key = my_func) or lst.sort(key = str.lower)
+2. lst.reverse()  # used for reversing list, it will reverse the original list
+3. lst.append()  # add new item at end
+4. lst.remove(12) # delete item 12 from list, throw error if the value is not in list
+5. lst.pop() # removes last item in list
+6. lst.pop(3) # removes 3rd item in the list
+7. lst.insert(3,21)  # insert 21 at 3rd position
+8. lst.count(23)  # count no. of times 23 appears in list
+9. idx = lst.index(22)  # return index of item 22, reports error if the value is absent in list
+10. list.extend(list/tuple/string/dictionary/set) # adds any iterable to the list
+11. list.clear()  # clears the entire list
+12. list2 = list1.copy()  # copies the contents of list1 into list2
+

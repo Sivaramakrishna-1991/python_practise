@@ -1,0 +1,4 @@
+# write a program to get the volume of a sphere with radius six
+r = 6
+v = 4 * 22 * r ** 3 / 3 / 7
+print("volume = ", v)

@@ -1,0 +1,11 @@
+# Write a Python program to add two objects if both objects are integers.
+def int_checking(a, b):
+    try:
+        if isinstance(a, int) and isinstance(b, int):
+            print(f"sum of {a} and {b} is {a+b}")
+    except TypeError:
+        print(f'The given values are {type(a)}, {type(b)}, please try again later')
+
+
+int_checking(5, 6)
+int_checking(6, 7.8)

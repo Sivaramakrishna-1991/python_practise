@@ -1,0 +1,79 @@
+A decorator function receives a function, adds some functionality(decoration) to it returns it. 
+
+There are many decorators avaible in the library. Other commony used library decorators are
+@classmethod 
+@staticmethod 
+@property 
+@classmethod 
+@staticmethod
+
+Decorators are used to define methods inside a class namespace that are not connected to a particular instance
+of that class. The @property decorator is used to customize getters and setters for class attributes. 
+
+# Python program to illustrate functions
+# Functions can return another function
+ex 1:
+def create_adder(x):
+	def adder(y):
+		return x+y
+
+	return adder
+
+add_15 = create_adder(15)
+
+print(add_15(10))
+
+ex 2:
+def my_decorator(func):
+    def wrapper():
+        print('****************')
+        func()
+	print('~~~~~~~~~~~~~~~~')
+    return wrapper
+
+def display():
+    print(' I stand decorated')
+
+def show():
+    print('Nothing great. Me too!')
+
+display = my_decorator(display)
+display()
+show = my_decorator(show)
+show()
+
+ex: 3
+# Factorial program with memoization using
+# decorators.
+
+# A decorator function for function 'f' passed
+# as parameter
+memory = {}
+
+
+def memoize_factorial(f):
+    # This inner function has access to memory
+    # and 'f'
+    def inner(num):
+        if num not in memory:
+            memory[num] = f(num)
+            print('result saved in memory')
+        else:
+            print('returning result from saved memory')
+        return memory[num]
+
+    return inner
+
+
+@memoize_factorial
+def facto(num):
+    if num == 1:
+        return 1
+    else:
+        return num * facto(num - 1)
+
+
+print(facto(5))
+print(facto(5))  # directly coming from saved memory
+
+

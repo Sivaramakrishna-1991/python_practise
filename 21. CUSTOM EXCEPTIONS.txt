@@ -1,0 +1,48 @@
+class OverTheLimitException(Exception):
+	def __init__(self, msg):
+		self.msg = msg
+
+
+def withdraw(amount):
+	if amount > 500:
+		raise OverTheLimitException(" you can't withdraw more than 500 per day")
+
+withdraw(600)
+
+_______________________________________________________________________________________________________________________________________________________
+LOGGING DEMO:
+
+import logging as log
+
+log.basicConfig(filename="mylog.log", level=log.DEBUG)
+log.critical("critical")
+log.error("error")
+log.warn("warnings")
+log.info("information")
+log.debug("debugging")
+_______________________________________________________________________________________________________________________________________________________
+
+LOGGING TO GET THE INFO OF ERRORS AND EXCEPTIONS:
+try:
+	a, b = [int(x) for x in input("enter two numbers: ").split()]
+	logging.info("division in progress")
+	c = a / b
+	print(c)
+except ZeroDivisionError:
+	print("Division by zero is not allowed, please enter non zero number")
+	logging.error("division by zero")
+print("This code after the exception")
+
+
+_______________________________________________________________________________________________________________________________________________________
+
+the assert statement is used for debugging and testing purposes. It allows you to assert that a certain condition is true and raises an AssertionError if the condition is false. 
+The assert statement takes the form:
+assert condition, message
+
+try:
+	num=int(input("enter a num: ")
+	assert num%2 == 0, "you have entered a odd number"
+except AssertionError as obj:
+	print(obj)
+print("after the assertion")

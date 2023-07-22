@@ -1,0 +1,55 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+							SETS
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. enumerate(sets)  # use this function in for loop by mentioning index, name -> will give output index and element in the sets
+2. mutable # we can assign insert values into normal sets but not frozen set
+3. concatenation of sets  ---> we can't concatenate sets
+4. merging of sets ----> we can't merge sets
+5. conversion of string/tuple/list into set --->set_conv = set(lst)
+6. Aliasing of set , changing of one set changes other ----> set4 = set3
+7. cloning set, add one empty list to complete list ----> set2 = set2 + set1 [ initialize set2 as empty]
+8. search an element in the set ---> a in set1
+9. Identity: check two sets are equal or not ---> set1 is set2 or set1 is not set2
+10. comparision: we can compare two sets ----> set1 < set2
+11. Emptiness: we can check whether a set is empty ---> if not set1
+12. delete the set using del keyword
+
+
+BUILT IN FUNCTIONS: 
+----------------------------
+set = {25, 73, 37.5, 42}
+1.len(set)       # return number of items in the set
+2.max(set)     # return maximum element in the set
+3.min(set)      #return minimum element in the set
+4 sum(set)     # return sum of all elements in the set
+5.any(set)      # return true if any element of set is true
+6.all(set)        # return true if all elements of set are true
+7.del(set)       # deletes element or slice or entire set
+8.sorted(set)     # returns new sorted set and keeps original set unchanged
+
+
+
+
+
+SET METHODS:
+---------------------
+
+1. set1.add('hello')
+2. set1.update(t) --> we can any string/tuple/list/set
+3. set1.copy()  ----> performs deep copy
+4. set1.remove(ele) ---> throws an error if element not existed
+5. set1.discard(ele)  ----> won't throw any error if element not exists
+6. set1.clear()  ---> clears the set
+7. set1.issupperset(set2) --> checks if set1 is superset of set2
+8. set1.issubset(set2) ---> checks if set1 is subset of set2
+9. set1.isdisjoint(set2)  ----> if intersection of two sets is null then that set is called disjoint set
+10. Unlike tuples and lists, sets can't be nested with another sets
+
+MATHEMATICAL SET OPERATIONS :-
+-----------------------------------------------
+1. a |= b  # union
+2. a &= b # intersection
+3. a -=b   # difference
+4. a ^=b  # symmetric difference
+

@@ -1,0 +1,6 @@
+# write a program to test whether a num is within 100 of 1000 or 2000.
+num = int(input("Enter a number: "))
+if (1000 - num) <= 100 or (2000 - num) <= 100:
+    print('number is within 100 of 1000 or 2000')
+else:
+    print('number is not within the range')

@@ -1,0 +1,118 @@
+1. str.UPPER()
+2. str.LOWER()
+3. RAND(A,B)
+4. RANDOM()--> floating point 0.000000->0.9999999
+5. STR.SPLIT("CHAR")
+6. RANDOM.CHOICE()
+7. LEN(list)
+8. SUM(LIST)
+9. MAX(LIST)--->  we can use for str
+10. MIN(LIST)--> we can use for str
+11. TITLE()--->(ex: str.title()--> display first letter in capital letter)
+12. if you want to print characters like  '   "   \  then use escpae character \ (ex: msg='He said. \'Let us Python')
+13. id()-----> (ex:print(id(varable))
+14. statistics.mean(data)    # import statistics module and use these functions, data is a list
+15. statistics.mode(data)
+16. statistics.median(data)
+17. DEVMOD(NUM1, NUM2) #returns quotent and remainder NUM1/NUM2
+18. Disposal variable _ is usally used when we do not wish to use the variable further, and is being used only as a place-holder.
+19. ISINSTANCE(ele, tuple/list/set/dict)  # checks for the ele belongs to tuple or list or set or dict etc. 
+20. sys.setrecursionlimit(10 ** 6)
+21. map(fun_to_apply, list_of_inputs) # return obj converted to list, tuple etc.--> ex: map(math.factorial, lst1)
+22. filter(fun_to_apply, list_of_inputs) # return obj need to conv to list, tuple etc. 
+23. reduce(fun_to_apply, list_of_inputs) # return obj need to conv to list, tuple etc, performs a rolling computation to sequential pairs of values in a sequence and returns the result. ** from funtools import reduce
+	(map -> project, filter-> select, reduce-> aggregate)
+22. import math, random, etc--> we can import multiple modules in single line
+23. from math import sin, cos, tan --> we can import only specific names from a modules
+24. from functions import * --> imports all the functions
+25. from functions import display as disp --> we can rename a module while importing 
+26. globals()[var]--> prints the gloabal variables
+27. locals()---> prints the local variables
+28. __init__() --> first method to execute after intializing object
+29. vars() --> returns the dictionary of attributes and their values
+30. dir() -->  returns the list of attributes
+31. keyword.kwlist---> import keyword (to lists all keywords in python)
+32. bin(x) --> returns binary equivalent
+33. oct(x)
+34. hex(x)
+35. int(numeric string, base)
+36. all((a>1, b>2)) or any(()) used to check multiple conditions
+37. var--> if we declare variable name like this in a class, it can be called or used in anywhere in the program
+38. _var--> if we declare variable name like this in a class, it can be called or used in the class or its base classes only
+39.__ var--> if we declare variable name like this in a class, it can be called or used  in that class only
+40. isinstance(obj, class) --> to check whether the obj is instance of the class
+41. issubclass(derived, base) --> to check whther the derived class is derived from the particular base
+42. __mro__     -->gives the method of resolution order
+43. from abc import ABC, abstractmethod --> abc package, ABC --> Class, abstractmetho --> method   used for standardization process
+44. __iter__, __next__, iter(), next()
+45. hasattribute(obj, attrbute)
+47. t=threading.current_thread(){function} --> import threading
+48. t.name --> returns thread name {name, ident attributes}
+49. t.ident --> return thread unique identity
+50. t.is_alive() --> returns the status of thread
+51. t.start() --> to start the thread
+52. time.sleep(sec)  --> stop the execution (import time)
+53. time.join() --> waits for the thread on which it is called
+54. f.open(filename, r) --> to open a file
+55. f.read() --> to read file
+56. f.write(msg) --> write message to file
+57. f.close() --> closes the file
+58. import sys ---> lst = sys.argv gets the values of command line arguments
+59. getctime(), getmtime(), getatime() returns creation, modification and access time for the given file. 
+    times are returned as number of seconds since the epoch. epoch is considered to be 1st Jan 1970, 00:00:00
+60. ctime() function of time module converts the time expressed in seconds since epoch into a string representing
+    localtime
+61. enumerate(), we can conveniently access both the index and the value of each item in an iterable, 
+    which can be useful in various scenarios, including reading files, processing lists, or generating formatted outputs.
+62. To create .exe file from python script
+    1. pip install pyinstaller
+    2. goto script location
+    3. pyinstaller --onefile script_name.py
+    4. executale file will be created in the "dist" folder. 
+
+63. The doc string is available in the attribute __doc__ of a module, mention doc strings in triple quotes.
+    Using help() method we can print the functions/class/method documentation systematically.
+64. sys.exit() terminates the exution of the program
+65. sys.stdin.encoding --> prints the default encoding value
+66. time.perf_counter() returns the value of a peformance counter, i.e a clock in fractional seconds. Difference
+    between two consecutive calls to this functions determines the time required for executing a function.
+67. import struct; struct.calcsize() function is used to determine the size of a C data type, in bytes. In this case, the argument
+passed o the function is "p", which represents the C char * data type. The value returned by struct.calcsize("P") is then multiplied
+by 8, which is used to convert the size from bytes to bits. This is because the size of pointer is typically represted in bits
+68. import platform --> platform.version(), platform.release()
+69. import site --> site.getsitepackages() returns list of installed packages
+70. import subprocess --> subprocess.call(["C:\\Windows\\System32\\cmd.exe", "/c", "dir"])
+71. subproces.call(["ls", "-l"]) linux env
+72. os.path.realpath(__file__) returns the current executing file path
+73. os.cpu_count()  or multiprocessing.cpu_count() returns the no'of cpu cores
+74. from collection import Counter --> adding two dict by values having same key counter(d1) + counter(d2)
+75. itertools.product(*iterables, repeat=1) --> is used to find the cartesian product from the given iterator, 
+    output is lexicographic ordered. 
+76. from heapq import nlargest --> nlargest(3, my_dict, key=my_dict.get)
+77. x.translate(32, None) --> here 32 referes to space 
+78. from collections import Counter --> we can write the most common elements in an iterator with their count, we can also specify arugument also
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+							COMPREHENSION
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. lst = [exp for var in sequence [optional for and/ or if]
+2. set = [exp for var in sequence [optional for and/ or if]]
+3. dict_var = {key:value for (key, value) in dictonary,items()}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+"""
+ Write a Python program that prints out all colors from color_list_1 that are not present in color_list_2.
+Test Data :
+color_list_1 = set(["White", "Black", "Red"])
+color_list_2 = set(["Red", "Green"])
+Expected Output :
+{'Black', 'White'}
+"""
+
+
+def col_filter(lst1, lst2):
+    lst3 = []
+    for a in lst1:
+        if a not in lst2:
+            lst3.append(a)
+    return set(lst3)
+
+
+color_list_1 = {"White", "Black", "Red"}
+color_list_2 = {"Red", "Green"}
+set_list = col_filter(color_list_1, color_list_2)
+print(set_list)
+

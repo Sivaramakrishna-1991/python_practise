@@ -1,0 +1,45 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+							TUPLES								
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. enumerate(tuples)  # use this function in for loop by mentioning index, name -> will give output index and element in the tuples
+2. Immutable # we can't assign values to tuples  and append, insert, remove don't work ex: tup1[0]='siva' will throw an error
+  a. If a tuple contains mutable objects then we can modify tuples ex: tup1 = ('siva', [10,20,30]) we can modify tuple values in tuple
+3. concatenation of tuples  --->  tup1 = tup1 + ('after', 'you', 'became', 'matured')
+4. merging of tuple ----> tup1 = tup1 + tup2 or tup2 = tup1 * 2
+5. conversion of string/list/set into tuple --->tup_conv = tuple(lst)
+6. Aliasing of tuple , changing of one tuple changes other ----> tup4 = tup3
+7. cloning tuple, add one empty tuple to complete tuple ----> tup2 = tup2 + tup1 [ initialize tup2 as empty]
+8. search an element in the tuple ---> a in tup1
+9. Identity: check two tuple are equal or not ---> tup1 is tup2 or tup1 is not tup2
+10. comparision: we can compare two tuple ----> tup1 < tup2
+11. Emptiness: we can check whether a tuple is empty ---> if not tup1
+12. delete the tuple using del keyword
+
+
+BUILT IN FUNCTIONS: 
+----------------------------
+tup = (25, 73, 37.5, 42)
+1.len(tup)       # return number of items in the tuple
+2.max(tup)     # return maximum element in the tuple
+3.min(tup)      #return minimum element in the tuple
+4 sum(tup)     # return sum of all elements in the tuple
+5.any(tup)      # return true if any element of tuple is true
+6.all(tup)        # return true if all elements of tup are true
+7.del(tup)       # deletes element or slice or entire tuple
+8.sorted(tup)     # returns new sorted tuple and keeps original tuple unchanged
+9. reversed(tup)# returns new tup_reverseiterator object which has to be converted into a tuple to get reversed tuple
+
+
+TUPLE METHODS:
+---------------------
+
+Note: Any tuple is an object of type tuple. Its methods can be accessed using the syntax tpl.method(). 
+Note: Tuples are immutable, so we can convert the tuple into tuple and peform the append, insert, pop etc. and again convert into tuple
+
+tpl = (12, 30, 70)
+1. tpl.count(30) # searches for the 30 occurances in the tuple
+2. tpl.index(12) # returns the index of element 12
+3. sorted(tpl, key= operator.itemgetter(2)) # import operator; in general tuple/list sort by name, but we want to sort by specific key use itemgetter(element)
+
+

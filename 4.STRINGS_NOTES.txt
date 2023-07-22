@@ -1,0 +1,27 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+							STRING FUNCTIONS
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. str.upper() ---> to make all characters upper case
+2. str.lower() ---> to make all characters in the string into lower case
+3. str.isalpha()--> checks if all characters in string are alphabets
+4. str.isdigit() --> checks if all characters in string are digits
+5. str.isalnum()
+6. str.islower()
+7. str.isupper()
+8. str.startswith()--> checks if string starts with a value [ex:str.startswith('a')]
+9. str.endswith()---> checks if string ends with a value. 
+10.str.find() ---> searches for a value, returs its position. [ex:str.find('h',4,6)-> between the position 4 and 6]
+11.str.replace() ---> replace one value with another [ex: str.replace('char1','char2')]
+12.str.lstrip()--> removes whitespace from the left of string 
+13.str.rstrip()---> removes whitespace from the right of string
+14.str.strip()---> removes whitespaces from left and right
+15.str.split()---> split the string at a specified separator stirng. [ex:str.split('_')]
+16.str.partition()--> partitions string into 3 parts at fist occurance of specified string [ex: str.partiotion('ri')]
+17.join()--> different than conactenation. It joins string to each element of string1 except last  [ex: '-'.join(msg)]
+18.str.capitalize()--> converts first character of the string to upper case
+19.str.title()---> converts first character of each word of the string to upper case
+20.str.swapcase()----> swapcase in the string
+21.chr(65)---> return the unicode character of the corresponding number(A)
+22.ord('A')---> prints the corresponind ASCII number of the value(65)
+23. == ; != ; < ; > ; <= ; >= we can use these as comparison among strings

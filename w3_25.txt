@@ -1,0 +1,14 @@
+# program to test the given value is present in the list
+def checking_element(lst1, n):
+    if n in lst1:
+        return True
+    else:
+        return False
+
+
+lst1 = [1, 5, 8, 3]
+n = int(input('Enter an element: '))
+if checking_element(lst1, n):
+    print('Given element is in the list')
+else:
+    print('Given element is not in the list')

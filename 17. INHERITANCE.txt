@@ -1,0 +1,49 @@
+INHERITANCE: 1. Accessing the existing objects functionality
+	     2. Updating Existing ojbects functionality
+
+We can override the classes that exists in the parent classes.
+class College:
+    def __init__(self, clg_name, clg_addr):
+        self.clg_name = clg_name
+        self.clg_addr = clg_addr
+
+
+class Student(College):
+    def __init__(self, std_name, std_id, clg_name, clg_addr):
+        College.__init__(self, clg_name, clg_addr)
+        self.std_name = std_name
+        self.std_id = std_id
+
+    def disp(self):
+        print(self.clg_name, self.clg_addr, self.std_name, self.std_id)
+
+
+s = Student('siva', 123, 'IITB', 12345)
+s.disp()
+
+
+We can use Super() to inherit the functionalities of a super class, we can also call super method using 
+Super().function()
+ex 2:
+class College:
+    def __init__(self, clg_name, clg_addr):
+        self.clg_name = clg_name
+        self.clg_addr = clg_addr
+
+    def details():
+	print('course started')
+
+
+class Student(College):
+    def __init__(self, std_name, std_id, clg_name, clg_addr):
+        Super().__init__(self, clg_name, clg_addr)
+        self.std_name = std_name
+        self.std_id = std_id
+
+    def disp(self):
+	Super().details()
+        print(self.clg_name, self.clg_addr, self.std_name, self.std_id)
+
+
+s = Student('siva', 123, 'IITB', 12345)
+s.disp()

@@ -1,0 +1,16 @@
+import urllib.request
+try:
+	urllib.request.urlopen("https://www.python.org/") # if url not exists it will throw error
+	content = url.read()
+except urllib.error.HTTPError:
+	print("file not found")
+	exit()
+open('python.html', 'wb')
+f.write(content)
+f.close()
+
+
+ex:
+import urllib.request
+url = "https://www.google.com/img/python-logo@2x.png"
+urllib.request.urilretrive(url, "python.img")

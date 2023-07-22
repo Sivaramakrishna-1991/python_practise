@@ -1,0 +1,7 @@
+# write a program to cal the diff btw a given number and 17. If the number is greater than 17, return twice
+# the absolute difference
+n = int(input("Enter a number: "))
+if n > 17:
+    print(n - 17)
+else:
+    print(abs(n - 17))

@@ -1,0 +1,16 @@
+Arguments passed to a Python script are avaiable in sys.argv
+Ex: 1
+import sys
+print("no of arguments received ", len(sys.argv))
+print(type(sys.argv))
+for i, j in enumerate(sys.argv):
+    print(f"index = {i}, argument = {j}")
+    
+c:\> py commad_file.py siva rama krishna
+output: 
+no of arguments received  4
+<class 'list'>
+index = 0, argument = commad_file.py
+index = 1, argument = siva
+index = 2, argument = rama
+index = 3, argument = krishna

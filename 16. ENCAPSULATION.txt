@@ -1,0 +1,5 @@
+ENCAPSULATION: Bundling of data, along with the methods that operate on that data, into a single unit. 
+we can't access the class attributes directly by creating instance. we can access through methods only. 
+but in python there is no private, we can still access those using
+
+s._Student__id --> s is instance, Student is a class, __id is attribute

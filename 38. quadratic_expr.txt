@@ -1,0 +1,7 @@
+# Write a Python program to solve (x + y) * (x + y).
+def quadratic_equation(x, y):
+    return (x + y) * (x + y)
+
+
+print(quadratic_equation(4, 3))
+print(quadratic_equation(5, 6))

@@ -1,0 +1,11 @@
+a = [random.randint(10,100) for n in range(20)]
+a = [(x, x ** 2, x ** 3) for x in range(10)]
+a = [int(x) for x in ['10', '20', '30']
+a = [n for n in range(10, 30) if n % 2 == 0]
+a = ['!' if alphabet in 'aeiou' else alphabet for alphabet in 'technical']
+
+arr = [[1, 2, 3, 4], [5, 6, 7, 8], [10, 11, 12, 13]]
+b = [n for ele in arr for n in ele] or [*arr[0], *arr[1], *arr[2])
+d= {'a': 1, 'b': 2, 'c': 3}
+d2 = {k: v** 3 for (k, v) in d.items()}
+d3 = {k:('Even' if v%2==0 else 'Odd') for (k, v) in d.items()}

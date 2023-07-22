@@ -1,0 +1,64 @@
+# database operations
+1. Install connector
+2. Import the module into program
+3. create a connection
+4. create a cursor object
+ex:
+import mysql.connector;
+conn = mysql.connector.connect(host='localhost', database='mydb', user='root', password='test1234')
+if conn.is_connected():
+	print("Connected to mysql db")
+conn.close()
+
+
+ex:
+import mysql.connector;
+conn = mysql.connector.connect(host='localhost', database='mydb', user='root', password='test1234')
+if conn.is_connected():
+	print("Connected to mysql db")
+cursor = conn.cursor()
+cursor.execute('select * from emp')
+row = cursor.fetchone()  # fetchall() to fetch all the data, cursor.rowcount --> to count the no'of rows
+while row is not None:
+	print(row)
+	row = cursor.fetchone()
+cursor.close()
+conn.close()
+
+ex:
+import mysql.connector;
+conn = mysql.connector.connect(host='localhost', database='mydb', user='root', password='test1234')
+if conn.is_connected():
+	print("Connected to mysql db")
+cursor = conn.cursor()
+try:
+	cursor.execute("Insert into emp values(3, 'Abhi', 3000)")
+	conn.commit()
+	print("employee added")
+except:
+	conn.rollback()
+
+cursor.close()
+conn.close()
+
+ex:
+import mysql.connector
+def delete(id):
+	conn = mysql.connector.connect(host='localhost', database='mydb', user='root', password='test1234')
+	if conn.is_connected():
+		print("Connected to mysql db")
+	cursor = conn.cursor()
+	str = "delete from emp where id = '%d'"
+	args = (id)
+	try:
+		cursor.execute(str % args)
+		conn.commit()
+		print("employee deleted")
+	except:
+		conn.rollback()
+	
+	cursor.close()
+	conn.close()
+empId = int(input('Enter emp Id: '))
+delete(empId)
+

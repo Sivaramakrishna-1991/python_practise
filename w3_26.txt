@@ -1,0 +1,8 @@
+# creating histogram using the given list values
+def histogram_image(lst1):
+    for i in lst1:
+        print('@' * i)
+
+
+lst1 = [2, 3, 5, 1]
+histogram_image(lst1)

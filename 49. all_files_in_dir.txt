@@ -1,0 +1,14 @@
+from os import listdir
+from os.path import isfile, join
+files_list = [f for f in listdir('C:\\Users\\Happy') if isfile(join('C:\\Users\\Happy', f))]
+print(files_list)
+fl = []
+for f in listdir('C:\\Users\\Happy'):
+    if isfile(join('C:\\Users\\Happy', f)):
+        fl.append(f)
+
+print(fl)
+
+
+
+

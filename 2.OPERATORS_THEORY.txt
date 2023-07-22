@@ -1,0 +1,30 @@
+python operators
+ 	1. airthematic operators ( +, - , /, //, %, *, **)
+	2. logical operators (and, or, not)
+	3. comparison operators (>, <, >=, <=, ==)
+	4. terinary operators (statement if condition else statement)
+	5. bitwise operators (>>, <<, ||)
+	6. membership operatos (in, not in )
+	7. identity operators (is, is not)
+EX:
+print(int('1011', 2))  # convert binary to decimal
+print(int('341', 8))   # convert octal to decimal
+a = 3 + 4j
+print(a.real)
+print(a.imag)
+a = 0o123 # octal value
+b = 0b111 # binary value
+c = 0xf  # hexa decimal value
+
+and--> operator evaluates ALL expressions. It returns last expression if all all expressions evaluates to True.
+       otherwise it returns the first value that evaluates to False.
+
+or---> operator evalues ALL expressions and returns the first value that evaluates to True. Otherwise it returns
+       last value that evaluates to False. 
+
+pass--> statement is intened to do nothing on execution. Hence it is often called a no-op instruction. 
+
+break --> terminates the loop without executing the else block. 
+
+continue--> statement skips the rest of the statements in the block and continues with the next iteration of the
+	    loop. 

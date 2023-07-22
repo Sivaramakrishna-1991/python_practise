@@ -1,0 +1,25 @@
+Types of Recursion:
+
+a. Head recursion: Here firstly the recursive calls happen and then printing takes place.
+
+def headprint(n):
+    if n == 0:
+	return
+    else:
+	return headprint(n-1)
+	print(n)
+
+b. Tail recursion: Here firstly printing takes place and then recursive call will happen
+
+def tailprint(n):
+    if n == 11:
+	return
+    else:
+	print(n)
+	tailprint(n+1)
+
+1. default recursion limit in python is usually set to a small value (10 ** 4), if we provide a large input to the recursive
+function, a RecursionError will be raised
+setrecursionlimit() function is sys module permits us to set the recursion limit. Once set to 10 ^ 6 large inputs
+can be handled without any errors.
+ex. sys.setrecursionlimit(10 ** 6)

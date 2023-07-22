@@ -1,0 +1,14 @@
+# Write a Python program to parse a string to float or integer
+def parse(s):
+    try:
+        return int(s)
+
+    except ValueError:
+        return float(s)
+
+    finally:
+        return "Invalid type"
+
+
+a = input("Enter a value: ")
+print(parse(a))
