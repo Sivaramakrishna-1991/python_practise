@@ -1,0 +1,31 @@
+from datatime ----> to perform conversions and airthmetic involving different units of time.
+from datetime import timedelta --> to represent an interval of time. 
+a = timedelta(days=2, hours=6)
+b = timedelta(hours=4.5)
+c = a + b
+c.days
+c.seconds
+c.total_seconds()
+
+from datetime import datetime
+a = datetime(2012, 9, 23)
+print(a) --> we can add timedetla instance here to this
+b = datetime(2012, 12, 21) + c
+d= b- a
+d.days
+
+now = datetime.today() --> prints the today date and current time --> datetime always aware of leap years.
+
+dateutil module---? used for complex date manipulations, such as dealing with timezones, fuzzytime ranges, etc.
+
+import datetime
+from dateutil.relativedelta import relativedelta
+print(datetime.timedelta(10))
+a = datetime.datetime(2012, 3, 21)
+print(a)
+b = datetime.datetime(2012, 5, 4) + datetime.timedelta(30)
+c = relativedelta(months=3)
+print(a + c)
+d = relativedelta(b, a)
+print(d.days)
+
